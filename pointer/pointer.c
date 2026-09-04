@@ -27,7 +27,7 @@ immediate char after p, aka the numeric address A+1. if p is a integer, 4 bytes,
 
 4. Predict the three integers printed by the first printf call.
 
-4.  10 20 6
+4.  10 30 30 (not 10 20 6, forgot to consider the update() function)
 
 5. For each of the following, state whether the object itself resides on the stack, heap, or elsewhere:
 a, p, pp, local, heap, and the struct pair returned by malloc. In particular, distinguish the
@@ -89,6 +89,12 @@ int main(void)
 
     /* TODO (Part I): dynamically allocate an array of 100 struct pair
        objects, initialize element i to {i, 2*i}, and free it. */
+    struct pair *arr = malloc(sizeof (struct pair) * 100);
+    for (int i = 0; i<100; i++){
+        arr[i].x = i;
+        arr[i].y = 2*i;
+    }
     free(heap);
+    free(arr);
     return 0;
 }
