@@ -9,8 +9,8 @@ struct record {
 static int total_scores(struct record *records, int n)
 {
     int total = 0;
-    for (int i = 0; i <= n; i++) {   /* BUG: diagnose with GDB before editing */
-        total += records[i].score;
+    for (int i = 0; i < n; i++) {  
+		total += records[i].score;
     }
     return total;
 }
