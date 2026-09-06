@@ -79,6 +79,7 @@ static void test4(void)
         exit(EXIT_FAILURE);
 
     printf("test4: %s\n", message);
+    free(message);
 }
 
 int main(int argc, char **argv)
