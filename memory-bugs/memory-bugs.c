@@ -16,7 +16,7 @@ static size_t array_length(void)
 
 static void initialize_prefix(int *a, size_t count)
 {
-    for (size_t i = 0; i < count; ++i)
+    for (size_t i = 0; i <= count; i++)
         a[i] = (int)(10 * (i + 1));
 }
 
