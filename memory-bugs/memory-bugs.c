@@ -42,7 +42,7 @@ static void test1(void)
     if (a == NULL)
         exit(EXIT_FAILURE);
 
-    for (size_t i = 0; i <= n; ++i)
+    for (size_t i = 0; i < n; ++i)
         a[i] = (int)(i * 10);
 
     printf("test1: %d\n", a[n - 1]);
