@@ -68,8 +68,8 @@ static void test3(void)
         exit(EXIT_FAILURE);
 
     *p = 473;
-    release_int(p);
     printf("test3: %d\n", *p);
+    release_int(p);
 }
 
 static void test4(void)
